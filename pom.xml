@@ -11,7 +11,7 @@
 	<groupId>com.JPASpring</groupId>
 	<artifactId>JPASpring</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>JPASpring</name>
+	<nombre>JPASpring</nombre>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>

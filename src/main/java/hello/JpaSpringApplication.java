@@ -17,18 +17,18 @@ public class JpaSpringApplication {
 	}
 
 	@Bean
-	public CommandLineRunner jpaSample(PersonaRepository personaRepo) {
+	public CommandLineRunner jpaExample(PersonaRepository personaRepository) {
 		return (args) -> {
 
-			// save 2 todos in the H2 database
-			personaRepo.save(new Persona("Test"));
+			// persisto a una persona en la base de H2
+			Persona p1 = new Persona("Sherlock","Holmes","25877147","DNI",35);
+			personaRepository.save(p1);
 
-			Persona p1 = new Persona("Detailed test");
-			p1.setDescription("Detailed description");
-			personaRepo.save(p1);
+			Persona p2 = new Persona("John","Watson","25845347","DNI",37);
+			personaRepository.save(p2);
 
 			// query for all todos in the H2 database and print them
-			personaRepo.findAll().forEach(System.out::println);
+			personaRepository.findAll().forEach(System.out::println);
 		};
 	}
 
